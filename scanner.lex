@@ -44,10 +44,8 @@ default {return DEFAULT;}
 \} {return RBRACE;}
 = {return ASSIGN;}
 b {return B;}
-\* {return MULT;}
-\/ {return DIV;}
-\+ {return ADD;}
-\- {return SUB;}
+[\*\/] {return MULT_DIV_OP;}
+[\+\-] {return ADD_SUB_OP;}
 0|[1-9]{DIGIT}* {return NUM;}
 {ID} {return ID;}
 (\/\/)[^\n\r\r\n]* {;}

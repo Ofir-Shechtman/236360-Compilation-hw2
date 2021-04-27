@@ -83,13 +83,11 @@ extern int yydebug;
     AND = 284,                     /* AND  */
     EQUALITY = 285,                /* EQUALITY  */
     RELOP = 286,                   /* RELOP  */
-    ADD = 287,                     /* ADD  */
-    SUB = 288,                     /* SUB  */
-    MULT = 289,                    /* MULT  */
-    DIV = 290,                     /* DIV  */
-    NOT = 291,                     /* NOT  */
-    LPAREN = 292,                  /* LPAREN  */
-    RPAREN = 293                   /* RPAREN  */
+    ADD_SUB_OP = 287,              /* ADD_SUB_OP  */
+    MULT_DIV_OP = 288,             /* MULT_DIV_OP  */
+    NOT = 289,                     /* NOT  */
+    LPAREN = 290,                  /* LPAREN  */
+    RPAREN = 291                   /* RPAREN  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif

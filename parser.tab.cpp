@@ -71,13 +71,11 @@
 
 
    #include "output.hpp"
-   using namespace output;
    extern int yylineno;
    void yyerror(const char*);
 
 
-
-#line 81 "parser.tab.cpp"
+#line 79 "parser.tab.cpp"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -137,29 +135,27 @@ enum yysymbol_kind_t
   YYSYMBOL_AND = 29,                       /* AND  */
   YYSYMBOL_EQUALITY = 30,                  /* EQUALITY  */
   YYSYMBOL_RELOP = 31,                     /* RELOP  */
-  YYSYMBOL_ADD = 32,                       /* ADD  */
-  YYSYMBOL_SUB = 33,                       /* SUB  */
-  YYSYMBOL_MULT = 34,                      /* MULT  */
-  YYSYMBOL_DIV = 35,                       /* DIV  */
-  YYSYMBOL_NOT = 36,                       /* NOT  */
-  YYSYMBOL_LPAREN = 37,                    /* LPAREN  */
-  YYSYMBOL_RPAREN = 38,                    /* RPAREN  */
-  YYSYMBOL_YYACCEPT = 39,                  /* $accept  */
-  YYSYMBOL_Program = 40,                   /* Program  */
-  YYSYMBOL_Funcs = 41,                     /* Funcs  */
-  YYSYMBOL_FuncDecl = 42,                  /* FuncDecl  */
-  YYSYMBOL_RetType = 43,                   /* RetType  */
-  YYSYMBOL_Formals = 44,                   /* Formals  */
-  YYSYMBOL_FormalsList = 45,               /* FormalsList  */
-  YYSYMBOL_FormalDecl = 46,                /* FormalDecl  */
-  YYSYMBOL_Statements = 47,                /* Statements  */
-  YYSYMBOL_Statement = 48,                 /* Statement  */
-  YYSYMBOL_Call = 49,                      /* Call  */
-  YYSYMBOL_ExpList = 50,                   /* ExpList  */
-  YYSYMBOL_Type = 51,                      /* Type  */
-  YYSYMBOL_Exp = 52,                       /* Exp  */
-  YYSYMBOL_CaseList = 53,                  /* CaseList  */
-  YYSYMBOL_CaseDecl = 54                   /* CaseDecl  */
+  YYSYMBOL_ADD_SUB_OP = 32,                /* ADD_SUB_OP  */
+  YYSYMBOL_MULT_DIV_OP = 33,               /* MULT_DIV_OP  */
+  YYSYMBOL_NOT = 34,                       /* NOT  */
+  YYSYMBOL_LPAREN = 35,                    /* LPAREN  */
+  YYSYMBOL_RPAREN = 36,                    /* RPAREN  */
+  YYSYMBOL_YYACCEPT = 37,                  /* $accept  */
+  YYSYMBOL_Program = 38,                   /* Program  */
+  YYSYMBOL_Funcs = 39,                     /* Funcs  */
+  YYSYMBOL_FuncDecl = 40,                  /* FuncDecl  */
+  YYSYMBOL_RetType = 41,                   /* RetType  */
+  YYSYMBOL_Formals = 42,                   /* Formals  */
+  YYSYMBOL_FormalsList = 43,               /* FormalsList  */
+  YYSYMBOL_FormalDecl = 44,                /* FormalDecl  */
+  YYSYMBOL_Statements = 45,                /* Statements  */
+  YYSYMBOL_Statement = 46,                 /* Statement  */
+  YYSYMBOL_Call = 47,                      /* Call  */
+  YYSYMBOL_ExpList = 48,                   /* ExpList  */
+  YYSYMBOL_Type = 49,                      /* Type  */
+  YYSYMBOL_Exp = 50,                       /* Exp  */
+  YYSYMBOL_CaseList = 51,                  /* CaseList  */
+  YYSYMBOL_CaseDecl = 52                   /* CaseDecl  */
 };
 typedef enum yysymbol_kind_t yysymbol_kind_t;
 
@@ -481,19 +477,19 @@ union yyalloc
 /* YYFINAL -- State number of the termination state.  */
 #define YYFINAL  10
 /* YYLAST -- Last index in YYTABLE.  */
-#define YYLAST   273
+#define YYLAST   241
 
 /* YYNTOKENS -- Number of terminals.  */
-#define YYNTOKENS  39
+#define YYNTOKENS  37
 /* YYNNTS -- Number of nonterminals.  */
 #define YYNNTS  16
 /* YYNRULES -- Number of rules.  */
-#define YYNRULES  56
+#define YYNRULES  54
 /* YYNSTATES -- Number of states.  */
-#define YYNSTATES  116
+#define YYNSTATES  112
 
 /* YYMAXUTOK -- Last valid token kind.  */
-#define YYMAXUTOK   293
+#define YYMAXUTOK   291
 
 
 /* YYTRANSLATE(TOKEN-NUM) -- Symbol number corresponding to TOKEN-NUM
@@ -536,19 +532,19 @@ static const yytype_int8 yytranslate[] =
        5,     6,     7,     8,     9,    10,    11,    12,    13,    14,
       15,    16,    17,    18,    19,    20,    21,    22,    23,    24,
       25,    26,    27,    28,    29,    30,    31,    32,    33,    34,
-      35,    36,    37,    38
+      35,    36
 };
 
 #if YYDEBUG
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_int8 yyrline[] =
 {
-       0,    26,    26,    27,    28,    29,    30,    31,    32,    33,
-      34,    35,    36,    37,    38,    39,    40,    41,    42,    43,
-      44,    45,    46,    47,    48,    49,    50,    51,    52,    53,
-      54,    55,    56,    57,    58,    59,    60,    61,    62,    63,
-      64,    65,    66,    67,    68,    69,    70,    71,    72,    73,
-      74,    75,    76,    77,    78,    79,    80
+       0,    24,    24,    26,    27,    29,    31,    32,    34,    35,
+      37,    38,    40,    42,    43,    45,    46,    47,    48,    49,
+      50,    51,    52,    53,    54,    55,    56,    57,    59,    60,
+      62,    63,    65,    66,    67,    69,    70,    71,    72,    73,
+      74,    75,    76,    77,    78,    79,    80,    81,    82,    83,
+      84,    86,    87,    88,    90
 };
 #endif
 
@@ -568,7 +564,7 @@ static const char *const yytname[] =
   "B", "BOOL", "TRUE", "FALSE", "RETURN", "WHILE", "BREAK", "CONTINUE",
   "SWITCH", "CASE", "ASSIGN", "DEFAULT", "COLON", "SC", "COMMA", "ID",
   "NUM", "STRING", "IF", "ELSE", "LBRACE", "RBRACE", "OR", "AND",
-  "EQUALITY", "RELOP", "ADD", "SUB", "MULT", "DIV", "NOT", "LPAREN",
+  "EQUALITY", "RELOP", "ADD_SUB_OP", "MULT_DIV_OP", "NOT", "LPAREN",
   "RPAREN", "$accept", "Program", "Funcs", "FuncDecl", "RetType",
   "Formals", "FormalsList", "FormalDecl", "Statements", "Statement",
   "Call", "ExpList", "Type", "Exp", "CaseList", "CaseDecl", YY_NULLPTR
@@ -589,7 +585,7 @@ static const yytype_int16 yytoknum[] =
        0,   256,   257,   258,   259,   260,   261,   262,   263,   264,
      265,   266,   267,   268,   269,   270,   271,   272,   273,   274,
      275,   276,   277,   278,   279,   280,   281,   282,   283,   284,
-     285,   286,   287,   288,   289,   290,   291,   292,   293
+     285,   286,   287,   288,   289,   290,   291
 };
 #endif
 
@@ -607,18 +603,18 @@ static const yytype_int16 yytoknum[] =
      STATE-NUM.  */
 static const yytype_int16 yypact[] =
 {
-     148,   -31,   -31,   -31,   -31,     3,   -31,   148,     6,   -31,
-     -31,   -31,    -9,     1,    -4,   -31,    20,    16,    18,     1,
-     -31,   154,   -31,    81,     8,    35,    39,    29,   -14,    36,
-     154,   118,   -31,    53,    54,   -31,   -31,   -31,    41,    70,
-     -31,    90,    34,   -31,   153,    90,   -31,   -31,    90,    90,
-      59,    90,   136,   -31,   -31,   -31,     2,   -31,   -31,    63,
-     202,   -31,    90,    90,    90,    90,    90,    90,    90,    90,
-     213,   224,   170,   -31,    72,   194,   235,   -31,    90,   -31,
-      90,   -31,   161,   -19,    74,   102,   -15,   -15,   -31,   -31,
-     154,    65,   -31,   -31,    90,   154,   178,   -31,   -31,    46,
-     -31,    89,   -31,    57,    97,    92,    46,   154,    98,   154,
-     -31,   -31,   -31,   154,   154,   154
+      64,   -31,   -31,   -31,   -31,     3,   -31,    64,     7,   -31,
+     -31,   -31,    -1,     1,    16,   -31,    34,    42,    29,     1,
+     -31,   173,   -31,    95,    31,    45,    53,    52,   -14,    58,
+     173,   137,   -31,    59,    56,   -31,   -31,   -31,    62,    96,
+     -31,   111,    87,   -31,     8,   111,   -31,   -31,   111,   111,
+      77,   111,   155,   -31,   -31,   -31,     4,   -31,   -31,    65,
+     178,   -31,   111,   111,   111,   111,   111,   111,   187,   196,
+     107,   -31,    69,   172,   205,   -31,   111,   -31,   111,   -31,
+     -17,    12,    26,    43,    73,   -31,   173,    81,   -31,   -31,
+     111,   173,   124,   -31,   -31,     2,   -31,    90,   -31,   101,
+     106,    98,     2,   173,   109,   173,   -31,   -31,   -31,   173,
+     173,   173
 };
 
   /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
@@ -629,29 +625,29 @@ static const yytype_int8 yydefact[] =
        3,     7,    32,    33,    34,     0,     2,     3,     0,     6,
        1,     4,     0,     8,     0,     9,    10,     0,     0,     0,
       12,     0,    11,     0,     0,     0,     0,     0,     0,     0,
-       0,     0,    13,     0,     0,    45,    46,    20,    40,    42,
-      44,     0,     0,    41,     0,     0,    25,    26,     0,     0,
-       0,     0,     0,     5,    14,    19,     0,    43,    47,     0,
+       0,     0,    13,     0,     0,    43,    44,    20,    38,    40,
+      42,     0,     0,    39,     0,     0,    25,    26,     0,     0,
+       0,     0,     0,     5,    14,    19,     0,    41,    45,     0,
        0,    21,     0,     0,     0,     0,     0,     0,     0,     0,
-       0,     0,     0,    29,     0,    30,     0,    15,     0,    16,
-       0,    35,    49,    48,    50,    51,    38,    39,    36,    37,
-       0,     0,    18,    28,     0,     0,     0,    52,    24,     0,
-      31,    22,    17,     0,     0,     0,    54,     0,     0,     0,
-      27,    53,    23,     0,    55,    56
+       0,    29,     0,    30,     0,    15,     0,    16,     0,    35,
+      47,    46,    48,    49,    37,    36,     0,     0,    18,    28,
+       0,     0,     0,    50,    24,     0,    31,    22,    17,     0,
+       0,     0,    52,     0,     0,     0,    27,    51,    23,     0,
+      53,    54
 };
 
   /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int8 yypgoto[] =
 {
-     -31,   -31,   113,   -31,   -31,   -31,   105,   -31,   -26,   -30,
-     -21,    27,    17,   -16,    32,   -31
+     -31,   -31,   121,   -31,   -31,   -31,   112,   -31,   -26,   -30,
+     -21,    80,    11,   -16,    70,   -31
 };
 
   /* YYDEFGOTO[NTERM-NUM].  */
 static const yytype_int8 yydefgoto[] =
 {
        0,     5,     6,     7,     8,    14,    15,    16,    31,    32,
-      43,    74,    34,    75,   105,   106
+      43,    72,    34,    73,   101,   102
 };
 
   /* YYTABLE[YYPACT[STATE-NUM]] -- What to do in state STATE-NUM.  If
@@ -660,94 +656,88 @@ static const yytype_int8 yydefgoto[] =
 static const yytype_int8 yytable[] =
 {
       33,    54,    49,    10,    52,     2,     3,    44,     4,    33,
-      33,    64,    65,    66,    67,    68,    69,     9,    78,    68,
-      69,    79,    54,    50,     9,    58,    60,    12,    13,    70,
-      17,    33,    71,    72,    18,    76,    17,    20,     2,     3,
-      19,     4,    35,    36,    21,    45,    82,    83,    84,    85,
-      86,    87,    88,    89,    46,    38,    39,    40,    47,    59,
-      98,   103,    96,   104,    97,   101,    48,    35,    36,    33,
-      41,    42,    55,    51,    33,    56,    57,   112,    50,   108,
-      38,    39,    40,   114,    54,    54,    33,   115,    33,    35,
-      36,    99,    33,    33,    33,    41,    42,    73,    35,    36,
-      37,    80,    38,    39,    40,    65,    66,    67,    68,    69,
-      93,    38,    39,    40,   107,   109,   113,    41,    42,   110,
-      11,   100,     2,     3,    22,     4,    41,    42,    23,    24,
-      25,    26,    27,    -1,    66,    67,    68,    69,   111,    28,
-       2,     3,    29,     4,    30,    53,    23,    24,    25,    26,
-      27,     1,     2,     3,     0,     4,     0,    28,     2,     3,
-      29,     4,    30,    77,    23,    24,    25,    26,    27,     0,
-       0,     0,    61,     0,     0,    28,     0,     0,    29,     0,
-      30,    62,    63,    64,    65,    66,    67,    68,    69,    92,
-      63,    64,    65,    66,    67,    68,    69,   102,    62,    63,
-      64,    65,    66,    67,    68,    69,    62,    63,    64,    65,
-      66,    67,    68,    69,    94,     0,     0,     0,     0,     0,
-       0,     0,    62,    63,    64,    65,    66,    67,    68,    69,
-      62,    63,    64,    65,    66,    67,    68,    69,     0,     0,
-      81,    62,    63,    64,    65,    66,    67,    68,    69,     0,
-       0,    90,    62,    63,    64,    65,    66,    67,    68,    69,
-       0,     0,    91,    62,    63,    64,    65,    66,    67,    68,
-      69,     0,     0,    95
+      33,     9,    63,    64,    65,    66,    67,    99,     9,   100,
+      76,    50,    54,    77,    17,    58,    60,    61,    12,    68,
+      17,    33,    69,    70,    13,    74,    62,    63,    64,    65,
+      66,    67,    64,    65,    66,    67,    80,    81,    82,    83,
+      84,    85,    18,    59,    19,    21,    94,    65,    66,    67,
+      92,    97,    93,    20,    46,    33,    45,     1,     2,     3,
+      33,     4,    47,   108,    -1,    66,    67,    56,    55,   110,
+      54,    54,    33,   111,    33,    35,    36,    48,    33,    33,
+      33,     2,     3,    51,     4,    35,    36,    50,    38,    39,
+      40,    78,    57,    35,    36,    89,    67,    95,    38,    39,
+      40,    41,    42,    71,    37,   103,    38,    39,    40,    35,
+      36,    41,    42,   104,   105,   106,    88,   109,    11,    41,
+      42,    22,    38,    39,    40,    62,    63,    64,    65,    66,
+      67,     2,     3,    98,     4,    41,    42,    23,    24,    25,
+      26,    27,    62,    63,    64,    65,    66,    67,    28,     2,
+       3,    29,     4,    30,    53,    23,    24,    25,    26,    27,
+      96,     0,   107,     0,     0,     0,    28,     2,     3,    29,
+       4,    30,    75,    23,    24,    25,    26,    27,     0,     0,
+       0,     0,    90,     0,    28,     0,     0,    29,     0,    30,
+      62,    63,    64,    65,    66,    67,    62,    63,    64,    65,
+      66,    67,     0,     0,    79,    62,    63,    64,    65,    66,
+      67,     0,     0,    86,    62,    63,    64,    65,    66,    67,
+       0,     0,    87,    62,    63,    64,    65,    66,    67,     0,
+       0,    91
 };
 
 static const yytype_int8 yycheck[] =
 {
       21,    31,    16,     0,    30,     4,     5,    23,     7,    30,
-      31,    30,    31,    32,    33,    34,    35,     0,    16,    34,
-      35,    19,    52,    37,     7,    41,    42,    21,    37,    45,
-      13,    52,    48,    49,    38,    51,    19,    21,     4,     5,
-      20,     7,     8,     9,    26,    37,    62,    63,    64,    65,
-      66,    67,    68,    69,    19,    21,    22,    23,    19,    42,
-      90,    15,    78,    17,    80,    95,    37,     8,     9,    90,
-      36,    37,    19,    37,    95,    21,     6,   107,    37,    22,
-      21,    22,    23,   109,   114,   115,   107,   113,   109,     8,
-       9,    26,   113,   114,   115,    36,    37,    38,     8,     9,
-      19,    38,    21,    22,    23,    31,    32,    33,    34,    35,
-      38,    21,    22,    23,    25,    18,    18,    36,    37,    27,
-       7,    94,     4,     5,    19,     7,    36,    37,    10,    11,
-      12,    13,    14,    31,    32,    33,    34,    35,   106,    21,
-       4,     5,    24,     7,    26,    27,    10,    11,    12,    13,
-      14,     3,     4,     5,    -1,     7,    -1,    21,     4,     5,
-      24,     7,    26,    27,    10,    11,    12,    13,    14,    -1,
-      -1,    -1,    19,    -1,    -1,    21,    -1,    -1,    24,    -1,
-      26,    28,    29,    30,    31,    32,    33,    34,    35,    19,
-      29,    30,    31,    32,    33,    34,    35,    19,    28,    29,
-      30,    31,    32,    33,    34,    35,    28,    29,    30,    31,
-      32,    33,    34,    35,    20,    -1,    -1,    -1,    -1,    -1,
-      -1,    -1,    28,    29,    30,    31,    32,    33,    34,    35,
-      28,    29,    30,    31,    32,    33,    34,    35,    -1,    -1,
-      38,    28,    29,    30,    31,    32,    33,    34,    35,    -1,
-      -1,    38,    28,    29,    30,    31,    32,    33,    34,    35,
-      -1,    -1,    38,    28,    29,    30,    31,    32,    33,    34,
-      35,    -1,    -1,    38
+      31,     0,    29,    30,    31,    32,    33,    15,     7,    17,
+      16,    35,    52,    19,    13,    41,    42,    19,    21,    45,
+      19,    52,    48,    49,    35,    51,    28,    29,    30,    31,
+      32,    33,    30,    31,    32,    33,    62,    63,    64,    65,
+      66,    67,    36,    42,    20,    26,    86,    31,    32,    33,
+      76,    91,    78,    21,    19,    86,    35,     3,     4,     5,
+      91,     7,    19,   103,    31,    32,    33,    21,    19,   105,
+     110,   111,   103,   109,   105,     8,     9,    35,   109,   110,
+     111,     4,     5,    35,     7,     8,     9,    35,    21,    22,
+      23,    36,     6,     8,     9,    36,    33,    26,    21,    22,
+      23,    34,    35,    36,    19,    25,    21,    22,    23,     8,
+       9,    34,    35,    22,    18,    27,    19,    18,     7,    34,
+      35,    19,    21,    22,    23,    28,    29,    30,    31,    32,
+      33,     4,     5,    19,     7,    34,    35,    10,    11,    12,
+      13,    14,    28,    29,    30,    31,    32,    33,    21,     4,
+       5,    24,     7,    26,    27,    10,    11,    12,    13,    14,
+      90,    -1,   102,    -1,    -1,    -1,    21,     4,     5,    24,
+       7,    26,    27,    10,    11,    12,    13,    14,    -1,    -1,
+      -1,    -1,    20,    -1,    21,    -1,    -1,    24,    -1,    26,
+      28,    29,    30,    31,    32,    33,    28,    29,    30,    31,
+      32,    33,    -1,    -1,    36,    28,    29,    30,    31,    32,
+      33,    -1,    -1,    36,    28,    29,    30,    31,    32,    33,
+      -1,    -1,    36,    28,    29,    30,    31,    32,    33,    -1,
+      -1,    36
 };
 
   /* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
      symbol of state STATE-NUM.  */
 static const yytype_int8 yystos[] =
 {
-       0,     3,     4,     5,     7,    40,    41,    42,    43,    51,
-       0,    41,    21,    37,    44,    45,    46,    51,    38,    20,
-      21,    26,    45,    10,    11,    12,    13,    14,    21,    24,
-      26,    47,    48,    49,    51,     8,     9,    19,    21,    22,
-      23,    36,    37,    49,    52,    37,    19,    19,    37,    16,
-      37,    37,    47,    27,    48,    19,    21,     6,    52,    51,
-      52,    19,    28,    29,    30,    31,    32,    33,    34,    35,
-      52,    52,    52,    38,    50,    52,    52,    27,    16,    19,
-      38,    38,    52,    52,    52,    52,    52,    52,    52,    52,
-      38,    38,    19,    38,    20,    38,    52,    52,    48,    26,
-      50,    48,    19,    15,    17,    53,    54,    25,    22,    18,
-      27,    53,    48,    18,    47,    47
+       0,     3,     4,     5,     7,    38,    39,    40,    41,    49,
+       0,    39,    21,    35,    42,    43,    44,    49,    36,    20,
+      21,    26,    43,    10,    11,    12,    13,    14,    21,    24,
+      26,    45,    46,    47,    49,     8,     9,    19,    21,    22,
+      23,    34,    35,    47,    50,    35,    19,    19,    35,    16,
+      35,    35,    45,    27,    46,    19,    21,     6,    50,    49,
+      50,    19,    28,    29,    30,    31,    32,    33,    50,    50,
+      50,    36,    48,    50,    50,    27,    16,    19,    36,    36,
+      50,    50,    50,    50,    50,    50,    36,    36,    19,    36,
+      20,    36,    50,    50,    46,    26,    48,    46,    19,    15,
+      17,    51,    52,    25,    22,    18,    27,    51,    46,    18,
+      45,    45
 };
 
   /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
 static const yytype_int8 yyr1[] =
 {
-       0,    39,    40,    41,    41,    42,    43,    43,    44,    44,
-      45,    45,    46,    47,    47,    48,    48,    48,    48,    48,
-      48,    48,    48,    48,    48,    48,    48,    48,    49,    49,
-      50,    50,    51,    51,    51,    52,    52,    52,    52,    52,
-      52,    52,    52,    52,    52,    52,    52,    52,    52,    52,
-      52,    52,    52,    53,    53,    53,    54
+       0,    37,    38,    39,    39,    40,    41,    41,    42,    42,
+      43,    43,    44,    45,    45,    46,    46,    46,    46,    46,
+      46,    46,    46,    46,    46,    46,    46,    46,    47,    47,
+      48,    48,    49,    49,    49,    50,    50,    50,    50,    50,
+      50,    50,    50,    50,    50,    50,    50,    50,    50,    50,
+      50,    51,    51,    51,    52
 };
 
   /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
@@ -756,9 +746,9 @@ static const yytype_int8 yyr2[] =
        0,     2,     1,     0,     2,     8,     1,     1,     0,     1,
        1,     3,     2,     1,     2,     3,     3,     5,     4,     2,
        2,     3,     5,     7,     5,     2,     2,     7,     4,     3,
-       1,     3,     1,     1,     1,     3,     3,     3,     3,     3,
-       1,     1,     1,     2,     1,     1,     1,     2,     3,     3,
-       3,     3,     4,     2,     1,     3,     4
+       1,     3,     1,     1,     1,     3,     3,     3,     1,     1,
+       1,     2,     1,     1,     1,     2,     3,     3,     3,     3,
+       4,     2,     1,     3,     4
 };
 
 
@@ -1226,337 +1216,325 @@ yyreduce:
   switch (yyn)
     {
   case 2: /* Program: Funcs  */
-#line 26 "parser.ypp"
-                {printProductionRule(1);}
-#line 1232 "parser.tab.cpp"
+#line 24 "parser.ypp"
+                {output::printProductionRule(1);}
+#line 1222 "parser.tab.cpp"
     break;
 
   case 3: /* Funcs: %empty  */
-#line 27 "parser.ypp"
-        {printProductionRule(2);}
-#line 1238 "parser.tab.cpp"
+#line 26 "parser.ypp"
+        {output::printProductionRule(2);}
+#line 1228 "parser.tab.cpp"
     break;
 
   case 4: /* Funcs: FuncDecl Funcs  */
-#line 28 "parser.ypp"
-                         {printProductionRule(3);}
-#line 1244 "parser.tab.cpp"
+#line 27 "parser.ypp"
+                         {output::printProductionRule(3);}
+#line 1234 "parser.tab.cpp"
     break;
 
   case 5: /* FuncDecl: RetType ID LPAREN Formals RPAREN LBRACE Statements RBRACE  */
 #line 29 "parser.ypp"
-                                                                     {printProductionRule(4);}
-#line 1250 "parser.tab.cpp"
+                                                                     {output::printProductionRule(4);}
+#line 1240 "parser.tab.cpp"
     break;
 
   case 6: /* RetType: Type  */
-#line 30 "parser.ypp"
-               {printProductionRule(5);}
-#line 1256 "parser.tab.cpp"
+#line 31 "parser.ypp"
+               {output::printProductionRule(5);}
+#line 1246 "parser.tab.cpp"
     break;
 
   case 7: /* RetType: VOID  */
-#line 31 "parser.ypp"
-               {printProductionRule(6);}
-#line 1262 "parser.tab.cpp"
+#line 32 "parser.ypp"
+               {output::printProductionRule(6);}
+#line 1252 "parser.tab.cpp"
     break;
 
   case 8: /* Formals: %empty  */
-#line 32 "parser.ypp"
-          {printProductionRule(7);}
-#line 1268 "parser.tab.cpp"
+#line 34 "parser.ypp"
+          {output::printProductionRule(7);}
+#line 1258 "parser.tab.cpp"
     break;
 
   case 9: /* Formals: FormalsList  */
-#line 33 "parser.ypp"
-                      {printProductionRule(8);}
-#line 1274 "parser.tab.cpp"
+#line 35 "parser.ypp"
+                      {output::printProductionRule(8);}
+#line 1264 "parser.tab.cpp"
     break;
 
   case 10: /* FormalsList: FormalDecl  */
-#line 34 "parser.ypp"
-                         {printProductionRule(9);}
-#line 1280 "parser.tab.cpp"
+#line 37 "parser.ypp"
+                         {output::printProductionRule(9);}
+#line 1270 "parser.tab.cpp"
     break;
 
   case 11: /* FormalsList: FormalDecl COMMA FormalsList  */
-#line 35 "parser.ypp"
-                                       {printProductionRule(10);}
-#line 1286 "parser.tab.cpp"
+#line 38 "parser.ypp"
+                                       {output::printProductionRule(10);}
+#line 1276 "parser.tab.cpp"
     break;
 
   case 12: /* FormalDecl: Type ID  */
-#line 36 "parser.ypp"
-                     {printProductionRule(11);}
-#line 1292 "parser.tab.cpp"
+#line 40 "parser.ypp"
+                     {output::printProductionRule(11);}
+#line 1282 "parser.tab.cpp"
     break;
 
   case 13: /* Statements: Statement  */
-#line 37 "parser.ypp"
-                       {printProductionRule(12);}
-#line 1298 "parser.tab.cpp"
+#line 42 "parser.ypp"
+                       {output::printProductionRule(12);}
+#line 1288 "parser.tab.cpp"
     break;
 
   case 14: /* Statements: Statements Statement  */
-#line 38 "parser.ypp"
-                               {printProductionRule(13);}
-#line 1304 "parser.tab.cpp"
+#line 43 "parser.ypp"
+                               {output::printProductionRule(13);}
+#line 1294 "parser.tab.cpp"
     break;
 
   case 15: /* Statement: LBRACE Statements RBRACE  */
-#line 39 "parser.ypp"
-                                     {printProductionRule(14);}
-#line 1310 "parser.tab.cpp"
+#line 45 "parser.ypp"
+                                     {output::printProductionRule(14);}
+#line 1300 "parser.tab.cpp"
     break;
 
   case 16: /* Statement: Type ID SC  */
-#line 40 "parser.ypp"
-                     {printProductionRule(15);}
-#line 1316 "parser.tab.cpp"
+#line 46 "parser.ypp"
+                     {output::printProductionRule(15);}
+#line 1306 "parser.tab.cpp"
     break;
 
   case 17: /* Statement: Type ID ASSIGN Exp SC  */
-#line 41 "parser.ypp"
-                                {printProductionRule(16);}
-#line 1322 "parser.tab.cpp"
+#line 47 "parser.ypp"
+                                {output::printProductionRule(16);}
+#line 1312 "parser.tab.cpp"
     break;
 
   case 18: /* Statement: ID ASSIGN Exp SC  */
-#line 42 "parser.ypp"
-                           {printProductionRule(17);}
-#line 1328 "parser.tab.cpp"
+#line 48 "parser.ypp"
+                           {output::printProductionRule(17);}
+#line 1318 "parser.tab.cpp"
     break;
 
   case 19: /* Statement: Call SC  */
-#line 43 "parser.ypp"
-                  {printProductionRule(18);}
-#line 1334 "parser.tab.cpp"
+#line 49 "parser.ypp"
+                  {output::printProductionRule(18);}
+#line 1324 "parser.tab.cpp"
     break;
 
   case 20: /* Statement: RETURN SC  */
-#line 44 "parser.ypp"
-                    {printProductionRule(19);}
-#line 1340 "parser.tab.cpp"
+#line 50 "parser.ypp"
+                    {output::printProductionRule(19);}
+#line 1330 "parser.tab.cpp"
     break;
 
   case 21: /* Statement: RETURN Exp SC  */
-#line 45 "parser.ypp"
-                        {printProductionRule(20);}
-#line 1346 "parser.tab.cpp"
+#line 51 "parser.ypp"
+                        {output::printProductionRule(20);}
+#line 1336 "parser.tab.cpp"
     break;
 
   case 22: /* Statement: IF LPAREN Exp RPAREN Statement  */
-#line 46 "parser.ypp"
-                                                  {printProductionRule(21);}
-#line 1352 "parser.tab.cpp"
+#line 52 "parser.ypp"
+                                                  {output::printProductionRule(21);}
+#line 1342 "parser.tab.cpp"
     break;
 
   case 23: /* Statement: IF LPAREN Exp RPAREN Statement ELSE Statement  */
-#line 47 "parser.ypp"
-                                                                   {printProductionRule(22);}
-#line 1358 "parser.tab.cpp"
+#line 53 "parser.ypp"
+                                                                   {output::printProductionRule(22);}
+#line 1348 "parser.tab.cpp"
     break;
 
   case 24: /* Statement: WHILE LPAREN Exp RPAREN Statement  */
-#line 48 "parser.ypp"
-                                            {printProductionRule(23);}
-#line 1364 "parser.tab.cpp"
+#line 54 "parser.ypp"
+                                            {output::printProductionRule(23);}
+#line 1354 "parser.tab.cpp"
     break;
 
   case 25: /* Statement: BREAK SC  */
-#line 49 "parser.ypp"
-                   {printProductionRule(24);}
-#line 1370 "parser.tab.cpp"
+#line 55 "parser.ypp"
+                   {output::printProductionRule(24);}
+#line 1360 "parser.tab.cpp"
     break;
 
   case 26: /* Statement: CONTINUE SC  */
-#line 50 "parser.ypp"
-                      {printProductionRule(25);}
-#line 1376 "parser.tab.cpp"
+#line 56 "parser.ypp"
+                      {output::printProductionRule(25);}
+#line 1366 "parser.tab.cpp"
     break;
 
   case 27: /* Statement: SWITCH LPAREN Exp RPAREN LBRACE CaseList RBRACE  */
-#line 51 "parser.ypp"
-                                                          {printProductionRule(26);}
-#line 1382 "parser.tab.cpp"
+#line 57 "parser.ypp"
+                                                          {output::printProductionRule(26);}
+#line 1372 "parser.tab.cpp"
     break;
 
   case 28: /* Call: ID LPAREN ExpList RPAREN  */
-#line 52 "parser.ypp"
-                                {printProductionRule(27);}
-#line 1388 "parser.tab.cpp"
+#line 59 "parser.ypp"
+                                {output::printProductionRule(27);}
+#line 1378 "parser.tab.cpp"
     break;
 
   case 29: /* Call: ID LPAREN RPAREN  */
-#line 53 "parser.ypp"
-                           {printProductionRule(28);}
-#line 1394 "parser.tab.cpp"
+#line 60 "parser.ypp"
+                           {output::printProductionRule(28);}
+#line 1384 "parser.tab.cpp"
     break;
 
   case 30: /* ExpList: Exp  */
-#line 54 "parser.ypp"
-              {printProductionRule(29);}
-#line 1400 "parser.tab.cpp"
+#line 62 "parser.ypp"
+              {output::printProductionRule(29);}
+#line 1390 "parser.tab.cpp"
     break;
 
   case 31: /* ExpList: Exp COMMA ExpList  */
-#line 55 "parser.ypp"
-                            {printProductionRule(30);}
-#line 1406 "parser.tab.cpp"
+#line 63 "parser.ypp"
+                            {output::printProductionRule(30);}
+#line 1396 "parser.tab.cpp"
     break;
 
   case 32: /* Type: INT  */
-#line 56 "parser.ypp"
-           {printProductionRule(31);}
-#line 1412 "parser.tab.cpp"
+#line 65 "parser.ypp"
+           {output::printProductionRule(31);}
+#line 1402 "parser.tab.cpp"
     break;
 
   case 33: /* Type: BYTE  */
-#line 57 "parser.ypp"
-               {printProductionRule(32);}
-#line 1418 "parser.tab.cpp"
+#line 66 "parser.ypp"
+               {output::printProductionRule(32);}
+#line 1408 "parser.tab.cpp"
     break;
 
   case 34: /* Type: BOOL  */
-#line 58 "parser.ypp"
-               {printProductionRule(33);}
-#line 1424 "parser.tab.cpp"
+#line 67 "parser.ypp"
+               {output::printProductionRule(33);}
+#line 1414 "parser.tab.cpp"
     break;
 
   case 35: /* Exp: LPAREN Exp RPAREN  */
-#line 59 "parser.ypp"
-                        {printProductionRule(34);}
-#line 1430 "parser.tab.cpp"
-    break;
-
-  case 36: /* Exp: Exp MULT Exp  */
-#line 60 "parser.ypp"
-                       {printProductionRule(35);}
-#line 1436 "parser.tab.cpp"
-    break;
-
-  case 37: /* Exp: Exp DIV Exp  */
-#line 61 "parser.ypp"
-                      {printProductionRule(35);}
-#line 1442 "parser.tab.cpp"
-    break;
-
-  case 38: /* Exp: Exp ADD Exp  */
-#line 62 "parser.ypp"
-                      {printProductionRule(35);}
-#line 1448 "parser.tab.cpp"
-    break;
-
-  case 39: /* Exp: Exp SUB Exp  */
-#line 63 "parser.ypp"
-                      {printProductionRule(35);}
-#line 1454 "parser.tab.cpp"
-    break;
-
-  case 40: /* Exp: ID  */
-#line 64 "parser.ypp"
-             {printProductionRule(36);}
-#line 1460 "parser.tab.cpp"
-    break;
-
-  case 41: /* Exp: Call  */
-#line 65 "parser.ypp"
-               {printProductionRule(37);}
-#line 1466 "parser.tab.cpp"
-    break;
-
-  case 42: /* Exp: NUM  */
-#line 66 "parser.ypp"
-              {printProductionRule(38);}
-#line 1472 "parser.tab.cpp"
-    break;
-
-  case 43: /* Exp: NUM B  */
-#line 67 "parser.ypp"
-                {printProductionRule(39);}
-#line 1478 "parser.tab.cpp"
-    break;
-
-  case 44: /* Exp: STRING  */
-#line 68 "parser.ypp"
-                 {printProductionRule(40);}
-#line 1484 "parser.tab.cpp"
-    break;
-
-  case 45: /* Exp: TRUE  */
 #line 69 "parser.ypp"
-               {printProductionRule(41);}
-#line 1490 "parser.tab.cpp"
+                        {output::printProductionRule(34);}
+#line 1420 "parser.tab.cpp"
     break;
 
-  case 46: /* Exp: FALSE  */
+  case 36: /* Exp: Exp MULT_DIV_OP Exp  */
 #line 70 "parser.ypp"
-                {printProductionRule(42);}
-#line 1496 "parser.tab.cpp"
+                              {output::printProductionRule(35);}
+#line 1426 "parser.tab.cpp"
     break;
 
-  case 47: /* Exp: NOT Exp  */
+  case 37: /* Exp: Exp ADD_SUB_OP Exp  */
 #line 71 "parser.ypp"
-                  {printProductionRule(43);}
-#line 1502 "parser.tab.cpp"
+                             {output::printProductionRule(35);}
+#line 1432 "parser.tab.cpp"
     break;
 
-  case 48: /* Exp: Exp AND Exp  */
+  case 38: /* Exp: ID  */
 #line 72 "parser.ypp"
-                      {printProductionRule(44);}
-#line 1508 "parser.tab.cpp"
+             {output::printProductionRule(36);}
+#line 1438 "parser.tab.cpp"
     break;
 
-  case 49: /* Exp: Exp OR Exp  */
+  case 39: /* Exp: Call  */
 #line 73 "parser.ypp"
-                     {printProductionRule(45);}
-#line 1514 "parser.tab.cpp"
+               {output::printProductionRule(37);}
+#line 1444 "parser.tab.cpp"
     break;
 
-  case 50: /* Exp: Exp EQUALITY Exp  */
+  case 40: /* Exp: NUM  */
 #line 74 "parser.ypp"
-                           {printProductionRule(46);}
-#line 1520 "parser.tab.cpp"
+              {output::printProductionRule(38);}
+#line 1450 "parser.tab.cpp"
     break;
 
-  case 51: /* Exp: Exp RELOP Exp  */
+  case 41: /* Exp: NUM B  */
 #line 75 "parser.ypp"
-                        {printProductionRule(46);}
-#line 1526 "parser.tab.cpp"
+                {output::printProductionRule(39);}
+#line 1456 "parser.tab.cpp"
     break;
 
-  case 52: /* Exp: LPAREN Type RPAREN Exp  */
+  case 42: /* Exp: STRING  */
 #line 76 "parser.ypp"
-                                 {printProductionRule(47);}
-#line 1532 "parser.tab.cpp"
+                 {output::printProductionRule(40);}
+#line 1462 "parser.tab.cpp"
     break;
 
-  case 53: /* CaseList: CaseDecl CaseList  */
+  case 43: /* Exp: TRUE  */
 #line 77 "parser.ypp"
-                             {printProductionRule(48);}
-#line 1538 "parser.tab.cpp"
+               {output::printProductionRule(41);}
+#line 1468 "parser.tab.cpp"
     break;
 
-  case 54: /* CaseList: CaseDecl  */
+  case 44: /* Exp: FALSE  */
 #line 78 "parser.ypp"
-                   {printProductionRule(49);}
-#line 1544 "parser.tab.cpp"
+                {output::printProductionRule(42);}
+#line 1474 "parser.tab.cpp"
     break;
 
-  case 55: /* CaseList: DEFAULT COLON Statements  */
+  case 45: /* Exp: NOT Exp  */
 #line 79 "parser.ypp"
-                                   {printProductionRule(50);}
-#line 1550 "parser.tab.cpp"
+                  {output::printProductionRule(43);}
+#line 1480 "parser.tab.cpp"
     break;
 
-  case 56: /* CaseDecl: CASE NUM COLON Statements  */
+  case 46: /* Exp: Exp AND Exp  */
 #line 80 "parser.ypp"
-                                     {printProductionRule(51);}
-#line 1556 "parser.tab.cpp"
+                      {output::printProductionRule(44);}
+#line 1486 "parser.tab.cpp"
+    break;
+
+  case 47: /* Exp: Exp OR Exp  */
+#line 81 "parser.ypp"
+                     {output::printProductionRule(45);}
+#line 1492 "parser.tab.cpp"
+    break;
+
+  case 48: /* Exp: Exp EQUALITY Exp  */
+#line 82 "parser.ypp"
+                           {output::printProductionRule(46);}
+#line 1498 "parser.tab.cpp"
+    break;
+
+  case 49: /* Exp: Exp RELOP Exp  */
+#line 83 "parser.ypp"
+                        {output::printProductionRule(46);}
+#line 1504 "parser.tab.cpp"
+    break;
+
+  case 50: /* Exp: LPAREN Type RPAREN Exp  */
+#line 84 "parser.ypp"
+                                 {output::printProductionRule(47);}
+#line 1510 "parser.tab.cpp"
+    break;
+
+  case 51: /* CaseList: CaseDecl CaseList  */
+#line 86 "parser.ypp"
+                             {output::printProductionRule(48);}
+#line 1516 "parser.tab.cpp"
+    break;
+
+  case 52: /* CaseList: CaseDecl  */
+#line 87 "parser.ypp"
+                   {output::printProductionRule(49);}
+#line 1522 "parser.tab.cpp"
+    break;
+
+  case 53: /* CaseList: DEFAULT COLON Statements  */
+#line 88 "parser.ypp"
+                                   {output::printProductionRule(50);}
+#line 1528 "parser.tab.cpp"
+    break;
+
+  case 54: /* CaseDecl: CASE NUM COLON Statements  */
+#line 90 "parser.ypp"
+                                     {output::printProductionRule(51);}
+#line 1534 "parser.tab.cpp"
     break;
 
 
-#line 1560 "parser.tab.cpp"
+#line 1538 "parser.tab.cpp"
 
       default: break;
     }
@@ -1750,13 +1728,14 @@ yyreturn:
   return yyresult;
 }
 
-#line 82 "parser.ypp"
+#line 92 "parser.ypp"
+
 
 
 void yyerror(const char*){
-    errorSyn(yylineno);
+    output::errorSyn(yylineno);
 }
 
-int main(){
-    return yyparse();
-}
+
+
+int main(){ return yyparse(); }
