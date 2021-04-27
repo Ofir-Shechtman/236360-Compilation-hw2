@@ -68,5 +68,6 @@ void output::errorLex(int lineno){
 
 void output::errorSyn(int lineno){
     cout << "line " << lineno << ": " << "syntax error" << endl;
+    exit(1);
 }
 

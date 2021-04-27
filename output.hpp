@@ -4,6 +4,10 @@
 #include <string>
 using namespace std;
 
+extern int yylex();
+extern int yylineno;
+extern char* yytext;
+
 namespace output {
 	extern const string rules[];
     void printProductionRule(int ruleno);
